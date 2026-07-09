@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+    // 1. Identifier with string
+    char str[] = "Copilot";
+    printf("String identifier: %s\n", str);
+
+    // 2. Identifier with float
+    float pi = 3.14;
+    printf("Float identifier: %.2f\n", pi);
+
+    // 3. Identifier with integer
+    int age = 21;
+    printf("Integer identifier: %d\n", age);
+
+    // 4. Identifier naming rules
+    int validName123 = 10;   // valid
+    printf("Valid identifier example: %d\n", validName123);
+
+    // 5. Convert integer to float
+    int numInt = 10;
+    float numFloat = (float)numInt;
+    printf("Integer to float: %.2f\n", numFloat);
+
+    // 6. Convert float to string
+    char buf[20];
+    sprintf(buf, "%.2f", pi);
+    printf("Float to string: %s\n", buf);
+
+    // 7. Convert string to integer
+    char numStr[] = "25";
+    int strToInt = atoi(numStr);
+    printf("String to integer: %d\n", strToInt);
+
+    // 8. Convert float to integer
+    float f = 9.8;
+    int fToInt = (int)f;
+    printf("Float to integer: %d\n", fToInt);
+
+    // 9. Arithmetic operations
+    int a = 7, b = 3;
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %d\n", a / b);
+    printf("Modulus: %d\n", a % b);
+
+    // 10. Comparison operations
+    printf("a > b: %d\n", a > b);
+    printf("a == b: %d\n", a == b);
+    printf("a != b: %d\n", a != b);
+
+    // 11. Logical operations
+    int x = 1, y = 0;
+    printf("x && y: %d\n", x && y);
+    printf("x || y: %d\n", x || y);
+    printf("!x: %d\n", !x);
+
+    // 12. Add two strings
+    char s1[50] = "Hello";   // make buffer larger
+    char s2[] = "World";
+    strcat(s1, s2);
+    printf("String addition: %s\n", s1);
+
+    // 13. Add two integers
+    int i1 = 10, i2 = 20;
+    printf("Integer addition: %d\n", i1 + i2);
+
+    // 14. Add integer and string (not allowed directly)
+    printf("Integer + String is not allowed directly in C\n");
+
+    // 15. Multiply string and integer (repeat string)
+    char repeat[] = "Hi! ";
+    for(int i=0; i<3; i++) {
+        printf("%s", repeat);
+    }
+    printf("\n");
+
+    return 0;
+}
