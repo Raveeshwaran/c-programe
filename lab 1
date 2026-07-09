@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Print Hello World
+    printf("HELLO WORLD!\n");
+
+    // 2. Print Welcome
+    printf("Welcome to the world of Python\n");
+
+    // 3. Print with quotes
+    printf("This is an 'IMPORTANT' News\n");
+
+    // 4. Print with apostrophe
+    printf("Good Book's\n");
+
+    // 5. Decimal to Hex and Binary
+    int dec;
+    printf("Enter decimal number: ");
+    scanf("%d", &dec);
+    printf("Hex: %X\n", dec);
+    printf("Binary: ");
+    for(int i=31;i>=0;i--) {
+        printf("%d", (dec>>i)&1);
+    }
+    printf("\n");
+
+    // 6. Mathematical operators
+    int a=10,b=3;
+    printf("Add=%d Sub=%d Mul=%d Div=%d Mod=%d FloorDiv=%d\n",
+           a+b,a-b,a*b,a/b,a%b,a/b); // floor division same as int division in C
+
+    // 7. Separate digits and operate
+    int num;
+    printf("Enter two-digit number: ");
+    scanf("%d",&num);
+    int d1=num/10, d2=num%10;
+    printf("Digits: %d and %d, Sum=%d\n", d1,d2,d1+d2);
+
+    // 8. Swap two numbers
+    int x=5,y=7,temp;
+    temp=x; x=y; y=temp;
+    printf("Swapped: x=%d y=%d\n",x,y);
+
+    // 9. Areas and perimeters (simple formulas, no math.h)
+    int side=4,len=5,bre=3,r=2,base=6,h=4;
+    printf("Square: Area=%d Perimeter=%d\n",side*side,4*side);
+    printf("Rectangle: Area=%d Perimeter=%d\n",len*bre,2*(len+bre));
+    printf("Circle: Area=%d Perimeter=%d\n",22*r*r/7,2*22*r/7); // π≈22/7
+    printf("Triangle: Area=%d Perimeter=%d\n",(base*h)/2,base+h+side);
+
+    // 10. String operations (manual prints only)
+    printf("Werewolf\n");
+    printf("Doorman\n");
+    printf("4chan\n");
+    printf("4chan\n");
+    printf("testtesttesttest\n");
+
+    // 11. Single line input
+    int p,q;
+    printf("Enter two numbers: ");
+    scanf("%d %d",&p,&q);
+    printf("p=%d q=%d\n",p,q);
+
+    // 12. Age to 100 years
+    char name[20]; int age;
+    printf("Enter name and age: ");
+    scanf("%s %d",name,&age);
+    printf("%s, you will turn 100 in year %d\n",name,2026+(100-age));
+
+    // 13. Expressions
+    int xx=3*4%5;
+    int yy=-3+4-7*8/5%10;
+    printf("x=%d y=%d\n",xx,yy);
+
+    // 14. Float division integer quotient
+    float f=7.8; int qout=(int)(f/2);
+    printf("Quotient=%d\n",qout);
+
+    // 15. Type of data entered (basic demo)
+    int val;
+    printf("Enter number: ");
+    scanf("%d",&val);
+    printf("You entered integer: %d\n",val);
+
+    // 16. Conditions
+    int A,B,C;
+    printf("Enter a,b,c: ");
+    scanf("%d %d %d",&A,&B,&C);
+    printf("a>b and a<c: %d\n", (A>B && A<C));
+    printf("a>=b or a<=c: %d\n", (A>=B || A<=C));
+    printf("a==b or b>c: %d\n", (A==B || B>C));
+    printf("b>15 and c<10 or a>50: %d\n", (B>15 && C<10 || A>50));
+
+    // 17. Largest and smallest
+    int n1,n2,n3;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d",&n1,&n2,&n3);
+    int max=(n1>n2?(n1>n3?n1:n3):(n2>n3?n2:n3));
+    int min=(n1<n2?(n1<n3?n1:n3):(n2<n3?n2:n3));
+    printf("Largest=%d Smallest=%d\n",max,min);
+
+    return 0;
+}
+
